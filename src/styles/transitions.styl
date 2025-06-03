@@ -1,0 +1,24 @@
+.fade-enter-from
+  opacity: 0
+.fade-enter-to
+  opacity: 1
+.fade-leave-from
+  opacity: 1
+.fade-leave-to
+  opacity: 0
+.fade-enter-active
+  transition: opacity .2s ease
+.fade-leave-active
+  transition: opacity .2s ease
+
+.slide-down-enter-from, .slide-down-leave-to
+  transform: translateY(-300px)
+  opacity: 0
+
+.slide-down-enter-to, .slide-down-leave-from
+  transform: translateY(0)
+  opacity: 1
+
+
+.slide-down-leave-active, .slide-down-enter-active
+  transition: all .4s linear

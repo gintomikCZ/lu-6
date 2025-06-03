@@ -1,0 +1,56 @@
+1) refs ...v template na html elementu nebo komponente nastavime ref="value"
+  v JS muzeme pristupovat k elementu this.$refs.value
+
+2) transitions:
+  v template
+    <transition name="value">
+      <content v-if="condition">
+
+
+
+      </content>
+    </transition>
+  v css
+  .value-enter-from
+  .value-enter-to
+  .value-leave-from
+  .value-leave-to
+  .value-enter-active
+  .value-leave-active
+
+
+Hooks:
+
+<Transition
+  @before-enter="onBeforeEnter"
+  @enter="onEnter"
+  @after-enter="onAfterEnter"
+  @enter-cancelled="onEnterCancelled"
+
+  @before-leave="onBeforeLeave"
+  @leave="onLeave"
+  @after-leave="onAfterLeave"
+  @leave-cancelled="onLeaveCancelled"
+>
+
+slot - míst pro vložení kontentu
+
+dceřinná:
+<slot></slot>
+<slot name="slotname"></slot>
+
+mateřská
+<TComponent>
+    content, který přijde do jediného slotu
+</TComponent>
+
+<TComponent>
+  <template v-slot:slotname>
+    content, který přijde do  slotu jménem slotname
+  </template>
+  <template v-slot:slotname2>
+    content, který přijde do  slotu jménem slotname2
+  </template>
+</TComponent>
+
+
